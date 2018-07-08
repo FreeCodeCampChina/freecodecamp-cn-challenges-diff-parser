@@ -1,0 +1,25 @@
+{
+  "name": "freecodecamp-cn-challenges-diff-parser",
+  "version": "1.0.0",
+  "description": "Output challenges id and title based on code changes",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "test"
+  },
+  "keywords": [
+    "freecodecamp",
+    "freecodecamp-cn",
+    "freecodecamp-china",
+    "diff",
+    "parser"
+  ],
+  "author": "S1ngS1ng",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "inquirer": "^6.0.0",
+    "minimist": "^1.2.0",
+    "nodegit": "^0.22.1"
+  }
+}
