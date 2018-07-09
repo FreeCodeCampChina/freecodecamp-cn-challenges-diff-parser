@@ -98,3 +98,10 @@ node index.js [--type] [--path] [--debug]
     - Title corresponding to the line changes
     - Both new and old file path corresponding to the line changes
     - Line number corresponding to the line changes of both old file path and new file path
+
+# TODO
+- [ ] Verify Node.js version 6.3.0
+- [ ] Verify corresponding NPM version
+- [ ] Generate HTML output, pug?
+- [ ] Add babel
+- [ ] Set up build process
