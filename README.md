@@ -100,6 +100,7 @@ node index.js [--type] [--path] [--debug]
     - Line number corresponding to the line changes of both old file path and new file path
 
 # TODO
+- [ ] Add eslint
 - [ ] Verify Node.js version 6.3.0
 - [ ] Verify corresponding NPM version
 - [ ] Generate HTML output, pug?
