@@ -99,6 +99,23 @@ node index.js [--type] [--path] [--debug]
     - Both new and old file path corresponding to the line changes
     - Line number corresponding to the line changes of both old file path and new file path
 
+# Data Structure
+- `Diff` object for output
+```yaml
+newPath: String<Path>
+oldPath: String<Path>
+json: Array<String>      # The related JSON file split with \n
+diffs: Array<DiffHunk>   # Contains all diffs of the current file
+```
+- `DiffHunk` object
+```yaml
+newStart: Number         # The line number (of old json file) where change happens
+oldStart: Number
+data: Array<DiffLine>
+sign: ' ' | '-' | '+'    # Where empty string denotes unchanged lines
+content: String          # The actual changes
+```
+
 # TODO
 - [ ] Add eslint
 - [ ] Verify Node.js version 6.3.0
