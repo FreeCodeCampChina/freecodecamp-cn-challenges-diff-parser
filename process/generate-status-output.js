@@ -1,6 +1,7 @@
 const nodegit = require('nodegit');
 const { getIgnore } = require('../lib/git-helper/get-ignore');
-const { loggerStatus, loggerWarning } = require('../lib/reporter/logger-status');
+const { loggerStatus } = require('../lib/reporter/logger-status');
+const { loggerWarning } = require('../lib/reporter/logger-generic');
 
 /**
  * @function generateStatusOutput
