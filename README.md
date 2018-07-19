@@ -100,20 +100,26 @@ node index.js [--type] [--path] [--debug]
     - Line number corresponding to the line changes of both old file path and new file path
 
 # Data Structure
-- `Diff` object for output
+- `DiffObject` object for output
 ```yaml
 newPath: String<Path>
 oldPath: String<Path>
-json: Array<String>      # The related JSON file split with \n
-diffs: Array<DiffHunk>   # Contains all diffs of the current file
+oldFile: Array<String>    # The old JSON file split with \n
+newFile: Array<String>    # The new JSON file split with \n
+diffs: Array<ParsedHunk>  # Array that contains all parsed diff content
 ```
-- `DiffHunk` object
+
+- `ParsedHunk`
 ```yaml
+oldStart: Number         # The line number (of old json file) where change happens
 newStart: Number         # The line number (of old json file) where change happens
-oldStart: Number
-data: Array<DiffLine>
-sign: ' ' | '-' | '+'    # Where empty string denotes unchanged lines
-content: String          # The actual changes
+data: Array<DiffContent>
+```
+
+- `DiffContent`
+```yaml
+sign: String     # Possible values are ' ', '+' or '-', where ' ' denotes unchanged line of code, '+' denotes code addition and '-' denotes code subtraction
+content: String  # Line diff
 ```
 
 # TODO
